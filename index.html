@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row mainDiv">
+        <div
+          class="col-sm-12 bg-dark d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="row text text-warning">
+            <h2>Temperature Converter</h2>
+          </div>
+          <div class="row mb-5 mt-5">
+            <form action="#" method="">
+              <select
+                onchange="convertOptions()"
+                name=""
+                id="convertSelect"
+                class="temperatureOptions text-center fs-5 rounded-3"
+              >
+                <option value="others" selected disabled>
+                  Choose Temperature Unit
+                </option>
+                <option value="celsiusToFahrenheit">
+                  (°C) Celsius - (°F) Fahrenheit
+                </option>
+                <option value="celsiusToKelvin">
+                  (°C) Celsius - (°K) Kelvin
+                </option>
+                <option value="celsiusToRankine">
+                  (°C) Celsius - (°R) Rankine
+                </option>
+                <option value="fahrenheitToCelsius">
+                  (°F) Fahrenheit - (°C) Celsius
+                </option>
+                <option value="fahrenheitToKelvin">
+                  (°F) Fahrenheit - (°K) Kelvin
+                </option>
+                <option value="fahrenheitToRankine">
+                  (°F) Fahrenheit - (°R) Rankine
+                </option>
+
+                <option value="kelvinToCelsius">
+                  (°K) Kelvin - (°C) Celsius
+                </option>
+                <option value="kelvinToRankine">
+                  (°K) Kelvin - (°R) Rankine
+                </option>
+                <option value="kelvinToFahrenheit">
+                  (°K) Kelvin - (°F) Fahrenheit
+                </option>
+                <option value="rankineToCelsius">
+                  (°R) Rankine - (°C) Celsius
+                </option>
+                <option value="rankineToFahrenheit">
+                  (°R) Rankine - (°F) Fahrenheit
+                </option>
+                <option value="rankineToKelvin">
+                  (°R) Rankine - (°K) Kelvin
+                </option>
+              </select>
+            </form>
+          </div>
+
+          <div
+            class="row d-flex flex-row justify-content-center mb-5"
+            id="inputTempature"
+          >
+            <div class="col-5 text-center inputBorder p-0">
+              <div class="row mx-0">
+                <div
+                  class="col-9 d-flex flex-row align-items-center justify-content-center inputBox"
+                >
+                  <form action="#" method="">
+                    <input
+                      type="number"
+                      id="inputTemp"
+                      placeholder="0"
+                      class="inputTemp h5 text-center w-50"
+                    />
+                  </form>
+                  <div class="col-3 d-flex align-items-center text-warning">
+                    <h4 class="d-inline" id="inputUnit">°C</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-2 d-flex align-items-center h4 justify-content-center p-0 text-warning"
+            >
+              =
+            </div>
+            <div class="col-5 px-0 mx-0">
+              <div class="row d-flex flex-row flex-wrap rBox">
+                <div
+                  class="col-7 px-0 text-start resultBox d-flex align-items-center justify-content-evenly ms-3"
+                >
+                  <h5 class="text-end" id="result">0.00</h5>
+                  <h4 class="text-success" id="outputUnit">°F</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn">
+            <form action="#" method="">
+              <button class="btnConvert" onclick="convertTemperature()">
+                CONVERT
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
